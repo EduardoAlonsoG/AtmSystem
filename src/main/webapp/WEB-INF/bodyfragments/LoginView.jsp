@@ -24,29 +24,25 @@
 <div class="container mt-5 pt-5 align-items-cente">
 <div class="card bg-light">
 <div class="cardbody mx-auto">
-    <h4 class="card-title mt-3 text-center">Sign In Form</h4>
-     <p class="text-center">Please Put Your Account No and Pin !!</p>  
+    <h4 class="card-title mt-3 text-center">Inicia Sesion</h4>
+     <p class="text-center"></p>
 
 <!-- Form Start -->
 <sf:form method="post" action="${pageContext.request.contextPath}/loginView" modelAttribute="form">
 <br style="clear: both">
-<%
-						String uri = (String) request.getAttribute("uri");
-						%>
-						 <b class="text-center"><%@ include file="businessMessage.jsp"%></b>
-  <!-- Account -->
-  <s:bind path="accountnumber">
-       <font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
-  <div class="form-group input-group">
-    <div class="input-group-prepend">
-        <span class="input-group-text">
+    <%String uri = (String) request.getAttribute("uri");%>
+    <b class="text-center"><%@ include file="businessMessage.jsp"%></b>
+
+    <s:bind path="accountnumber">
+        <font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
             <i class="fa fa-address-book"></i>
         </span>
     </div>
        
-    <sf:input path="${status.expression}" type = "text"
-							placeholder="Enter Account Number" class="form-control" />
+    <sf:input path="${status.expression}" type = "text" placeholder="Ingresa Numero de Cuenta" class="form-control" />
 						
     </s:bind>
   </div>
@@ -54,8 +50,7 @@
 
 <!-- Password -->
 <s:bind path="pin">
-<font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+<font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -63,20 +58,16 @@
         </span>
     </div>
     
-    <sf:input path="${status.expression}" type="password"
-							placeholder="Enter pin" class="form-control" />
+    <sf:input path="${status.expression}" type="password" placeholder="Enter pin" class="form-control" />
     </s:bind>
   </div>
   <!-- Password End -->
 
-<input type="submit" class="btn btn-block btn-success" name="operation" value="SingIn">
+<input type="submit" class="btn btn-block btn-success" name="operation" value="Iniciar">
 
 <p class="text-center mt-3">
-    <a 	href="<c:url value = "/userRegistration" />">New User Register</a>
+    <a 	href="<c:url value = "/userRegistration" />">Registarte</a>
 </p>
-<%-- <p class="text-center mt-3">
-    <a href="<c:url value = "/voterlogin" />">Voter Login</a>
-</p> --%>
 
 </sf:form>
   <!-- Form End -->

@@ -17,7 +17,7 @@
 		<div class="container mt-5 pt-5 align-items-cente">
 			<div class="card bg-light">
 				<div class="cardbody mx-auto">
-					<p class="h4 mb-4 text-center mt-2">Deposit Cash</p>
+					<p class="h4 mb-4 text-center mt-2">Deposita Dinero</p>
 
 					<sf:form method="post"
 						action="${pageContext.request.contextPath}/depositemoney"
@@ -31,7 +31,7 @@
 						<div class="card" style="background-color: background;">
 							<div class="card-body">
 							<s:bind path="transaction">
-                                   <label for="inputEmail4" class="form-label">Enter Amount</label>
+                                   <label for="inputEmail4" class="form-label">Ingresa Cantidad</label>
 									<sf:input path="${status.expression}" type="text"
 										placeholder="Enter Amount" class="form-control" />
 										<font color="red" style="font-size: 13px"><sf:errors
@@ -44,8 +44,7 @@
 
 
 						<div class="container mt-4 text-center mb-2">
-							<input type="submit" class="btn btn-primary" name="operation"
-								value="Submit">
+							<input type="submit" class="btn btn-primary" name="operation" value="Aceptar">
 						</div>
 
 					</sf:form>

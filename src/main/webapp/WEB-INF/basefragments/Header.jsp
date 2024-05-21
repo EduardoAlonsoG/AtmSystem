@@ -91,9 +91,9 @@
 </head>
 <body>
 	<!-- header start -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<nav class="navbar navbar-expand-lg bg-dark" style="height: 70px">
 		<div class="container">
-			<a class="navbar-brand text-white" href="<c:url value = "/welcome" />"><b><span style="color: #ade7ad;">Cajero No Automatico</span> </b></a>
+			<a class="navbar-brand" href="<c:url value = "/welcome" />"><b><span style="color: #a6a6a6;">Cajero No Automatico</span> </b></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -101,12 +101,9 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<c:if test="${sessionScope.user == null }">
-						<a class="nav-link text-white"
-						href="<c:url value = "/welcome"/>">Inicio <span class="sr-only">(current)</span></a>
-					<!--<a class="nav-link text-white"
-						href="<c:url value = "/about" />">About</a>-->
-						<%-- <a class="nav-link text-white"
-						href="<c:url value = "/contactUs" />">Contact Us</a> --%>
+				<a class="nav-link text-white" href="<c:url value = "/welcome"/>">Inicio <span class="sr-only">(current)</span></a>
+					<!--<a class="nav-link text-white"href="<c:url value = "/about" />">About</a>-->
+					<%-- <a class="nav-link text-white" href="<c:url value = "/contactUs" />">Contact Us</a> --%>
 			</c:if>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
@@ -123,30 +120,33 @@
 						<c:if test="${sessionScope.user.roleid == 2}">
 
 							<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/balance" />">View Balance</a></li>
+								href="<c:url value = "/balance" />">Estado de Cuenta</a></li>
 								
 								<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/deposit" />">Deposit Cash</a></li>
+								href="<c:url value = "/deposit" />">Deposita Dinero</a></li>
 								
 								<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/withdrow" />">Withdraw Cash</a></li>
+								href="<c:url value = "/withdrow" />">Retira Dinero</a></li>
+
+								<li class="nav-item"><a class="nav-link text-white"
+								href="<c:url value = "/services" />">Pagar Servicios</a></li>
+
+								<li class="nav-item"><a class="nav-link text-white"
+								href="<c:url value = "/services" />">Pagar Servicios</a></li>
 								
 								<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/transactionlist" />">Mini Statement</a></li>
+								href="<c:url value = "/transactionlist" />">Movimientos</a></li>
 						</c:if>
 
 					</c:if>
 
 					<c:if test="${sessionScope.user != null}">
 					
-						<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/profile" />">EditarPerfil</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="<c:url value = "/profile" />">EditarPerfil</a></li>
 								
-								<li class="nav-item"><a class="nav-link text-white"
-								href="<c:url value = "/changepassword" />">Change Password</a></li>
-								
-									<li class="nav-item "><a class="nav-link text-white"
-							href="<c:url value="/loginView"/>"><b>Logout(${sessionScope.user.rolename }) </b></a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="<c:url value = "/changepassword" />"></a></li>
+
+						<li class="nav-item "><a class="nav-link text-white" href="<c:url value="/loginView"/>"><b>Cerrar Sesion(${sessionScope.user.rolename }) </b></a></li>
 					
 				<%-- 	<li class="nav-item"><a class="nav-link"
 						href="<c:url value="/profile"/>">My
@@ -163,14 +163,9 @@
 					</c:if>
 
 					<c:if test="${sessionScope.user == null}">
-					
+							<li class="nav-item"><a class="nav-link text-white" href="<c:url value = "/loginView" />">Login</a></li>
 							
-							<li class="nav-item"><a class="nav-link text-white"
-							href="<c:url value = "/loginView" />">Login</a></li>
-							
-								<li class="nav-item"><a class="nav-link text-white"
-							href="<c:url value = "/userRegistration" />">Registrations</a></li>
-
+							<li class="nav-item"><a class="nav-link text-white" href="<c:url value = "/userRegistration" />">Register</a></li>
 					</c:if>
 				</ul>
 			</div>

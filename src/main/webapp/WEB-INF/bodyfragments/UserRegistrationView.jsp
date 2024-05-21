@@ -24,21 +24,18 @@
 <div class="container mt-5">
 <div class="card bg-light">
 <div class="cardbody mx-auto">
-    <h4 class="card-title mt-3 text-center">Sign Up Form</h4>
-     <p class="text-center">Fill The Form and Complete Your Registration !!</p>  
+    <h4 class="card-title mt-3 text-center">Registrate aqui</h4>
+     <p class="text-center"></p>
     
 
 <!-- Form Start -->
 <sf:form method="post" action="${pageContext.request.contextPath}/userRegistration" modelAttribute="form">
-<%
-						String uri = (String) request.getAttribute("uri");
-						%>
-						 <b class="text-center"><%@ include file="businessMessage.jsp"%></b>
+<%String uri = (String) request.getAttribute("uri");%>
+    <b class="text-center"><%@ include file="businessMessage.jsp"%></b>
 
     <!-- UserName -->
      <s:bind path="userName">
-     	<font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+     	<font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -46,8 +43,7 @@
         </span>
     </div>
     
-    <sf:input path="${status.expression}"
-							placeholder="Enter User Name" class="form-control" />
+    <sf:input path="${status.expression}" placeholder="Nombre de usuario" class="form-control" />
 
     </div>
     </s:bind>
@@ -56,8 +52,7 @@
 
   <!-- Email -->
      <s:bind path="email">
-     <font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+     <font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
   <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -65,8 +60,7 @@
         </span>
     </div>
  
-    <sf:input path="${status.expression}" type = "email"
-							placeholder="Enter Email" class="form-control" />
+    <sf:input path="${status.expression}" type = "email" placeholder="Email" class="form-control" />
 						
     </div>
     </s:bind>
@@ -75,8 +69,7 @@
 
   <!-- Phone -->
      <s:bind path="phoneNo">
-     	<font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+     	<font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
   <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -84,13 +77,10 @@
         </span>
     </div>
     <select class="custom-select" style="max-width: 80px;">
-        <option>+91</option>
-        <option>+92</option>
-        <option>+93</option>
+        <option>+52</option>
     </select>
   
-    <sf:input path="${status.expression}"
-							placeholder="Enter PhoneNo" class="form-control" />
+    <sf:input path="${status.expression}" placeholder="Numero de Telefono" class="form-control" />
 					
      </div>
     </s:bind>
@@ -99,8 +89,7 @@
 
 <!-- User Type Feild -->
    <s:bind path="gender">
-   <font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+   <font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -109,9 +98,9 @@
     </div>
  
 						<sf:select class="form-control" path="${status.expression}">
-					             	<option selected disabled>--------Select Gender Type-------</option>
-									<sf:option value="Male"/>
-									<sf:option value="Female" />
+					             	<option selected disabled>--------Selecciona Genero-------</option>
+									<sf:option value="Masculino"/>
+									<sf:option value="Femenino" />
 								</sf:select>
 						</div>
 					</s:bind>
@@ -120,8 +109,7 @@
 
 <!-- Password -->
   <s:bind path="password">
-  <font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+  <font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -130,7 +118,7 @@
     </div>
     
     <sf:input path="${status.expression}" type="password"
-							placeholder="Enter Password" class="form-control" />
+							placeholder="Ingresa Contraseña" class="form-control" />
 				</div>		
     </s:bind>
   
@@ -138,8 +126,7 @@
   
   <!-- Account Number -->
   <s:bind path="accountnumber">
-  	<font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+  	<font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -147,8 +134,7 @@
         </span>
     </div>
       
-    <sf:input path="${status.expression}" type="text"
-							placeholder="Enter Account Number" class="form-control" />
+    <sf:input path="${status.expression}" type="text" placeholder="Numero de cuenta" class="form-control" />
 				</div>	
     </s:bind>
   
@@ -156,8 +142,7 @@
   
   <!-- Password -->
   <s:bind path="pin">
-  <font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+  <font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -165,17 +150,15 @@
         </span>
     </div>
     
-    <sf:input path="${status.expression}" type="password"
-							placeholder="Enter Pin" class="form-control" />
-				</div>		
+    <sf:input path="${status.expression}" type="password" placeholder="Ingresa tu PIN" class="form-control" />
+    </div>
     </s:bind>
   
   <!-- Password End -->
   
     <!-- Address -->
      <s:bind path="address">
-     	<font color="red" style="font-size: 13px"><sf:errors
-								path="${status.expression}" /></font>
+     	<font color="red" style="font-size: 13px"><sf:errors path="${status.expression}" /></font>
 <div class="form-group input-group">
     <div class="input-group-prepend">
         <span class="input-group-text">
@@ -184,7 +167,7 @@
     </div>
      
     <sf:input path="${status.expression}" type="text"
-							placeholder="Enter Address" class="form-control" />
+							placeholder="Direccion" class="form-control" />
 					
    
   </div>
@@ -201,8 +184,7 @@
         </span>
     </div>
    
-    <sf:input path="${status.expression}" 
-							placeholder="Enter DOB" id="datepicker" class="form-control" />
+    <sf:input path="${status.expression}" placeholder="Fecha de Nacimiento" id="datepicker" class="form-control" />
     
   </div>
   </s:bind>
@@ -210,8 +192,8 @@
   
   
 
-<input type="submit" name="operation" class="btn btn-block btn-success" value="Save">
-<input type="submit" name="operation" class="btn btn-block btn-secondary" value="Reset">
+<input type="submit" name="operation" class="btn btn-block btn-success" value="Guardar">
+<input type="submit" name="operation" class="btn btn-block btn-secondary" value="Limpiar">
 
 <%-- <p class="text-center mt-3">
     <a 	href="<c:url value = "/voterlogin" />">Voter Login</a>

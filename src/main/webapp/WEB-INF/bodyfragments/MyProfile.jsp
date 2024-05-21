@@ -17,13 +17,9 @@
 		action="${pageContext.request.contextPath}/profilee"
 		modelAttribute="form">
 		<div class="card">
-			<h5 class="card-header"
-				style="background-color: #00061df7; color: white;">My Profile</h5>
+			<h5 class="card-header" style="background-color: #00061df7; color: white;">My Profile</h5>
 			<div class="card-body">
 				<b><%@ include file="businessMessage.jsp"%></b>
-
-
-
 				<div class="col-md-6">
 					<s:bind path="userName">
 						<label for="inputEmail4" class="form-label">User Name</label>

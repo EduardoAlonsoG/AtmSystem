@@ -25,10 +25,7 @@ import atm.mg.system.service.UserServiceImpl;
 
 @Controller
 public class LoginCtl extends BaseCtl{
-	
-	protected static final String OP_SIGNIN = "SignIn";
-	protected static final String OP_SIGNUP = "SignUp";
-	protected static final String OP_LOGOUT = "Logout";
+
 	
 	
 	@Autowired
@@ -47,9 +44,9 @@ public class LoginCtl extends BaseCtl{
 	public String login(@RequestParam String operation,HttpSession session,@Valid @ModelAttribute("form") LoginForm form,BindingResult 
 			bindingResult,Model model,HttpServletRequest request){
 	
-	if (bindingResult.hasErrors()) {
-		return "login";
-	}
+		if (bindingResult.hasErrors()) {
+			return "login";
+		}
 	
 	
 	UserDTO bean = userserice.Authentication((UserDTO)form.getDTO());

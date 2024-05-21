@@ -21,7 +21,7 @@
 	<div class="container mt-2"
 		style="position: relative; min-height: 72vh">
 
-<h2 align="center">Statement List</h2>
+<h2 align="center">Tus Movimientos</h2>
 		<sf:form method="post"
 			action="${pageContext.request.contextPath}/transactionlist"
 			modelAttribute="form">
@@ -42,13 +42,13 @@
 			<table class="table table-striped table table-dark">
 				<tr>
 
-                    <th scope="col">Account Number</th>
-					<th scope="col">Account Holder Name</th>
-					<th scope="col">Transaction</th>
-					<th scope="col">Transaction Type</th>
-					<th scope="col">Total Balance</th>
-					<th scope="col">Date & Time</th>
-					<th scope="col">Action</th>
+                    <th scope="col">Numero de cuenta</th>
+					<th scope="col">Propietaro</th>
+					<th scope="col">Transaccion</th>
+					<th scope="col">Tipo de Transaccion</th>
+					<th scope="col">Balance Total</th>
+					<th scope="col">Fecha</th>
+					<th scope="col">Accion</th>
 				</tr>
 
                 <c:set var="totalbalance" value="${0}" />
@@ -57,9 +57,9 @@
 					<tr>
                         <td>${transactionlist.accountnumber}</td>
 						<td>${transactionlist.username}</td>
-						<td>&#8377; ${transactionlist.transaction}</td>
+						<td>$ ${transactionlist.transaction}</td>
 						<td>${transactionlist.transactiontype}</td>
-						<td>&#8377; ${transactionlist.totalbalance}</td>
+						<td>$ ${transactionlist.totalbalance}</td>
 						<td><fmt:formatDate type="both" dateStyle="short" timeStyle="short"  value="${transactionlist.date}" /></td>  
 						<c:choose>
 							<c:when test="${sessionScope.user.roleid == 1}">

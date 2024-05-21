@@ -15,7 +15,7 @@
 <link rel="stylesheet"
 	href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
-<body style="background-color: #f0f1f2">
+<body style="background-color: #ffffff">
 	<div class="container-fluid"
 		style="position: relative; min-height: 70vh">
 		<div class="row mt-5">
@@ -33,11 +33,11 @@
 
 						<c:set var="totalbalance" value="${transactionlist.totalbalance}" />
 						</c:forEach>
-							<h3>Hi, ${sessionScope.user.userName} Your Current Balance is</h3>
-							<h2>&#8377; ${totalbalance}</h2>
-							<h2>Thank You !!</h2>
-							<a href="<c:url value = "/welcome" />" class="btn btn-primary mt-3">Home</a>
-							<a href="<c:url value = "/transactionlist" />" class="btn btn-success mt-3">View Our Mini Statement</a>
+							<h3>Este es tu saldo actual, ${sessionScope.user.userName}</h3>
+							<h2>$ ${totalbalance}</h2>
+							<h2>Gracias</h2>
+							<a href="<c:url value = "/welcome" />" class="btn btn-primary mt-3">Regresar</a>
+							<a href="<c:url value = "/transactionlist" />" class="btn btn-success mt-3">Ver Movimientos</a>
 
 
 						</div>

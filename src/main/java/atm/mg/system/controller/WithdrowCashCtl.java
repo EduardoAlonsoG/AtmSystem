@@ -70,12 +70,12 @@ public class WithdrowCashCtl extends BaseCtl {
 		if (amount > 0) {
 		try {
 			service.add(bean);
-			model.addAttribute("success", "Withdrow Cash Successfully !!");
+			model.addAttribute("success", "Dinero Retirado !!");
 		} catch (DuplicateRecordException e) {
 			e.printStackTrace();
 		}
 		}else {
-			model.addAttribute("error", "Insufficient Balance");
+			model.addAttribute("error", "No hay dinero suficiente");
 		}
 
 		return "Withdrowcash";

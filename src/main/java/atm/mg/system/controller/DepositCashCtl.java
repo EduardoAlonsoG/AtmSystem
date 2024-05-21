@@ -73,7 +73,7 @@ public class DepositCashCtl extends BaseCtl {
 		try {
 			System.out.println(bean.toString());
 			service.add(bean);
-			model.addAttribute("success", "Money Addedd Successfully !!");
+			model.addAttribute("success", "El dinero se depositó !!");
 		} catch (DuplicateRecordException e) {
 			e.printStackTrace();
 		}

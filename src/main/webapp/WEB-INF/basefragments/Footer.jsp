@@ -11,7 +11,7 @@
   <!-- Footer Section -->
 <section class="footer bg-dark">
   <div class="container text-white py-5 text-center">
-     <p>Copyright © <%=Calendar.getInstance().get(Calendar.YEAR)%>  ATM Management System</p>
+     <p>Eduardo García <%=Calendar.getInstance().get(Calendar.YEAR) %>  Cajero Automatico</p>
   </div>
 </section>
 <!-- Footer End Section -->

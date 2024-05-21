@@ -17,7 +17,7 @@
 		<div class="container mt-5 pt-5 align-items-cente">
 			<div class="card bg-light">
 				<div class="cardbody mx-auto">
-					<p class="h4 mb-4 text-center mt-2">Withdrow Cash</p>
+					<p class="h4 mb-4 text-center mt-2">Retira Dinero</p>
 
 					<sf:form method="post"
 						action="${pageContext.request.contextPath}/withdrowmoney"
@@ -30,7 +30,7 @@
 
 						<div class="card" style="background-color: background;">
 							<div class="card-body">
-							<label for="inputEmail4" class="form-label">Enter Amount</label>
+							<label for="inputEmail4" class="form-label">Ingresa Cantidad</label>
 
 								<s:bind path="transaction">
 									<sf:input path="${status.expression}" type="text"
@@ -45,7 +45,7 @@
 
 						<div class="container mt-4 text-center mb-2">
 							<input type="submit" class="btn btn-primary" name="operation"
-								value="Submit">
+								value="Aceptar">
 						</div>
 
 					</sf:form>
